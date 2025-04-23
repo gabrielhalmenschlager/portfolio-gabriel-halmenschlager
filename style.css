@@ -1,5 +1,4 @@
-/* ESTILO GERAL  */
-
+/* Reset e configuração global */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +6,11 @@
     font-family: "Poppins", sans-serif;
 }
 
+/* Fundo branco e texto padrão #353535 */
 body {
-    background-color: black;
-    height: 100vh;
+    background-color: #ffffff;
+    color: #353535;
+    min-height: 100vh;
 }
 
 .interface {
@@ -17,15 +18,18 @@ body {
     margin: 0 auto;
 }
 
+/* Flex helper */
 .flex {
     display: flex;
 }
 
+/* Botões de contato e chamadas */
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
     font-weight: 600;
-    background-color: #004aad;
+    background-color: #353535;
+    color: #ffffff;
     border: 0;
     border-radius: 30px;
     cursor: pointer;
@@ -33,29 +37,29 @@ body {
 }
 
 .btn-contato button:hover {
-    box-shadow: 0px 0px 8px #004bad;
+    box-shadow: 0px 0px 8px rgba(53, 53, 53, 0.7);
     transform: scale(1.05);
 }
 
+/* Títulos principais */
 h2.titulo {
-    color: white;
+    color: #353535;
     font-size: 38px;
     text-align: center;
 }
-
 h2.titulo span {
-    color: #004aad;
+    /* Pode destacar com alguma variação se desejar, ou manter igual */
+    color: #353535;
 }
 
-
+/* Hover dos botões e inputs do formulário */
 button:hover,
 form .btn-enviar input:hover {
-    box-shadow: 0px 0px 8px #004bad;
+    box-shadow: 0px 0px 8px rgba(53, 53, 53, 0.7);
     transform: scale(1.05);
 }
 
-/* ESTILO DO CABECALHO */
-
+/* ---------- CABEÇALHO ---------- */
 header {
     padding: 40px 4%;
 }
@@ -65,21 +69,23 @@ header {
     width: auto;
 }
 
-header>.interface {
+/* Organização dos itens do header */
+header > .interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* Links do header */
 header a {
-    color: #5c5c5c;
+    color: #353535;
     text-decoration: none;
     display: inline-block;
     transition: .2s;
 }
 
 header nav.menu-desktop a:hover {
-    color: white;
+    color: #000;
     transform: scale(1.05);
 }
 
@@ -92,19 +98,18 @@ header nav.menu-desktop ul li {
     padding: 0 40px;
 }
 
-/* ESTILO DO MENU MOBILE */
-
-.btn-abrir-menu{
+/* ---------- MENU MOBILE ---------- */
+.btn-abrir-menu {
     display: none;
 }
 
 .btn-abrir-menu i {
-    color: #004aad;
+    color: #353535;
     font-size: 40px;
 }
 
 .menu-mobile {
-    background-color: black;
+    background-color: #ffffff;
     height: 100vh;
     position: fixed;
     top: 0;
@@ -113,13 +118,14 @@ header nav.menu-desktop ul li {
     width: 0%;
     overflow: hidden;
     transition: .5s;
+    border-left: 4px solid #353535;
 }
 
 .menu-mobile.abrir-menu {
     width: 70%;
 }
 
-.menu-mobile.abrir-menu ~ .overlay-menu{
+.menu-mobile.abrir-menu ~ .overlay-menu {
     display: block;
 }
 
@@ -128,7 +134,7 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a {
-    color: white;
+    color: #353535;
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
@@ -136,8 +142,8 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile nav ul li a:hover {
-    background-color: #004aad;
-    color: black;
+    background-color: #353535;
+    color: #ffffff;
 }
 
 .menu-mobile .btn-fechar {
@@ -145,12 +151,12 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile .btn-fechar i {
-    color: #004aad;
+    color: #353535;
     font-size: 30px;
 }
 
 .overlay-menu {
-    background-color: rgba(0, 0, 0, 0.637);
+    background-color: rgba(53, 53, 53, 0.2);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -160,8 +166,7 @@ header nav.menu-desktop ul li {
     display: none;
 }
 
-/* ESTILO DO TOPO DO SITE */
-
+/* ---------- TOPO DO SITE ---------- */
 .topo-do-site {
     padding: 80px 4%;
 }
@@ -173,18 +178,19 @@ header nav.menu-desktop ul li {
 }
 
 .topo-do-site h1 {
-    color: white;
+    color: #353535;
     font-size: 42px;
     line-height: 40px;
 }
 
 .topo-do-site .txt-topo-site h1 span {
-    color: #004aad;
+    /* Se desejar destacar de forma sutil, pode aplicar negrito ou itálico */
+    font-weight: 700;
 }
 
 .topo-do-site .txt-topo-site p {
-    color: white;
-    margin: 40px 0px;
+    color: #353535;
+    margin: 40px 0;
 }
 
 .topo-do-site .img-topo-site img {
@@ -196,14 +202,12 @@ header nav.menu-desktop ul li {
     0% {
         top: 0;
     }
-
     100% {
         top: 30px;
     }
 }
 
-/* ESTILO DAS ESPECIALIDADES */
-
+/* ---------- ESPECIALIDADES ---------- */
 section.especialidades {
     padding: 80px 4%;
 }
@@ -215,30 +219,30 @@ section.especialidades .flex {
 }
 
 .especialidades-box {
-    color: white;
+    color: #353535;
     padding: 40px;
     margin-top: 45px;
     border-radius: 20px;
     transition: .2s;
+    background-color: #f5f5f5;
 }
 
 .especialidades-box:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.337);
+    box-shadow: 0 0 10px rgba(53, 53, 53, 0.3);
 }
 
 .especialidades-box i {
     font-size: 70px;
-    color: #004aad;
+    color: #353535;
 }
 
 .especialidades-box h3 {
     font-size: 28px;
-    margin: 15px 0px;
+    margin: 15px 0;
 }
 
-/* ESTILO DO SOBRE */
-
+/* ---------- SOBRE ---------- */
 section.sobre {
     padding: 80px 4%;
 }
@@ -255,7 +259,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre {
-    color: white;
+    color: #353535;
 }
 
 .sobre .txt-sobre h2 {
@@ -265,7 +269,7 @@ section.sobre .flex {
 }
 
 .sobre .txt-sobre h2 span {
-    color: #004aad;
+    font-weight: 700;
     display: block;
 }
 
@@ -274,23 +278,25 @@ section.sobre .flex {
     text-align: justify;
 }
 
+/* Botões sociais */
 .btn-social button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 0;
-    background-color: #004aad;
+    background-color: #353535;
+    color: #ffffff;
     font-size: 22px;
     cursor: pointer;
     margin: 0 5px;
     transition: .2s;
 }
 
-/* ESTILO DO PORTFÓLIO */
-
+/* ---------- PORTFÓLIO ---------- */
 section.portfolio {
     padding: 80px 4%;
-    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.19);
+    /* Removemos sombras exageradas para um look mais clean */
+    /* box-shadow: 0 0 40px 10px rgba(53, 53, 53, 0.1); */
 }
 
 section.portfolio .flex {
@@ -301,9 +307,9 @@ section.portfolio .flex {
 .img-port {
     width: 360px;
     height: 460px;
-    background-color: #004aad;
+    background-color: #353535;
     background-size: cover;
-    background-position: 100% 0%;
+    background-position: center;
     transition: .8s;
     cursor: pointer;
     border-radius: 40px;
@@ -311,7 +317,7 @@ section.portfolio .flex {
 }
 
 .img-port:hover {
-    background-position: 100% 100%;
+    filter: brightness(0.9);
 }
 
 .overlay {
@@ -320,14 +326,13 @@ section.portfolio .flex {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.499);
-    border: 40px;
+    background-color: rgba(53, 53, 53, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 24px;
     font-weight: 600;
-    color: white;
+    color: #ffffff;
     opacity: 0;
     transition: .5s;
 }
@@ -336,8 +341,7 @@ section.portfolio .flex {
     opacity: 1;
 }
 
-/* ESTILO DO FORMULÁRIO DE CONTATO */
-
+/* ---------- FORMULÁRIO DE CONTATO ---------- */
 section.formulario {
     padding: 80px 4%;
 }
@@ -355,12 +359,12 @@ form {
 form input,
 form textarea {
     width: 100%;
-    background-color: #242424;
+    background-color: #f0f0f0;
     border: 0;
     border-radius: 15px;
     outline: 0;
     padding: 20px 15px;
-    color: white;
+    color: #353535;
     font-size: 18px;
 }
 
@@ -376,22 +380,23 @@ form .btn-enviar {
 
 form .btn-enviar input {
     width: 120px;
-    background-color: #004aad;
-    color: black;
+    background-color: #353535;
+    color: #ffffff;
     font-weight: 700;
     cursor: pointer;
     transition: .2s;
 }
 
-/* ESTILO DO RODAPÉ */
-
+/* ---------- RODAPÉ ---------- */
 footer {
     padding: 40px 4%;
-    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.19);
+    /* Sombra suave para dar delimitação */
+    box-shadow: 0 0 40px 10px rgba(53, 53, 53, 0.05);
 }
 
 footer .flex {
     justify-content: space-between;
+    align-items: center;
 }
 
 footer .line-footer {
@@ -399,16 +404,17 @@ footer .line-footer {
 }
 
 .borda {
-    border-top: 2px solid #004aad;
+    border-top: 2px solid #353535;
 }
 
 footer .line-footer p i {
-    color: #004aad;
+    color: #353535;
     font-size: 22px;
 }
 
 footer .line-footer p a {
-    color: white;
+    color: #353535;
+    text-decoration: none;
 }
 
 footer .logo-footer img {
@@ -416,107 +422,77 @@ footer .logo-footer img {
     width: auto;
 }
 
-/* RESPONSIVIDADE */
-
+/* ---------- RESPONSIVIDADE ---------- */
 @media screen and (max-width: 1024px) {
-
-    /* CLASSES GERAIS */
-
     .flex {
         flex-direction: column;
     }
-
     h2.titulo {
         font-size: 34px;
         line-height: 30px;
     }
-
-    /* CABEÇALHO */
-
+    /* Cabeçalho */
     .menu-desktop,
     .btn-contato {
         display: none;
     }
-
-    .btn-abrir-menu{
+    .btn-abrir-menu {
         display: block;
     }
-
-    /* TOPO DO SITE */
-
+    /* Topo do site */
     section.topo-do-site .flex {
         gap: 40px;
     }
-
     section.topo-do-site {
         padding: 20px 8%;
     }
-
     .topo-do-site h1 {
         font-size: 30px;
     }
-
     .topo-do-site .img-topo-site img {
         width: 100%;
     }
-
-    /* MINHAS ESPECIALIDADES */
-
+    /* Especialidades */
     section.especialidades {
         padding: 40px 8%;
     }
-
-    /* SOBRE */
-
+    /* Sobre */
     section.sobre {
         padding: 40px 8%;
     }
-
     .sobre .txt-sobre h2 {
         font-size: 34px;
         line-height: 35px;
         text-align: center;
     }
-
     .btn-social {
         text-align: center;
     }
-
     .img-sobre img {
         width: 100%;
     }
-
-    /* PORTFÓLIO */
-
+    /* Portfólio */
     section.portfolio {
         padding: 80px 8%;
     }
-
     section.portfolio .flex {
         gap: 60px;
     }
-
     .img-port {
         width: 100%;
         max-width: 360px;
         margin: 0 auto;
     }
-
-    /* FORMULÁRIO DE CONTATO */
-
+    /* Formulário de contato */
     section.formulario {
         padding: 80px 8%;
     }
-
-    /* ESTILO DO RODAPÉ */
-
+    /* Rodapé */
     footer .flex {
         flex-direction: column;
         gap: 40px;
     }
-
     footer .line-footer {
         text-align: center;
     }
-
 }
